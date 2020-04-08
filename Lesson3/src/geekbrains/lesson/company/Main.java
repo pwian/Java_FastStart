@@ -7,13 +7,13 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Guess the number");
-        int range = 100;
-        int number = (int)(Math.random() * range);
-        playLevel(range, number);
+        for (int i = 10; i <= 30; i += 10) playLevel(i);
+        System.out.println("Happy!!!");
         scanner.close();
     }
 
-    private static void playLevel(int range, int number){
+    private static void playLevel(int range){
+        int number = (int)(Math.random() * range);
         while (true){
             System.out.println("Print the number from 0 to " + range);
             int input_number = scanner.nextInt();
